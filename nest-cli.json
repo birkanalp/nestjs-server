@@ -1,4 +1,75 @@
 {
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src"
+  "sourceRoot": "apps/app/src",
+  "monorepo": true,
+  "root": "apps/app",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/app/tsconfig.app.json"
+  },
+  "projects": {
+    "app": {
+      "type": "application",
+      "root": "apps/app",
+      "entryFile": "main",
+      "sourceRoot": "apps/app/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/app/tsconfig.app.json"
+      }
+    },
+    "admin-app": {
+      "type": "application",
+      "root": "apps/admin-app",
+      "entryFile": "main",
+      "sourceRoot": "apps/admin-app/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/admin-app/tsconfig.app.json"
+      }
+    },
+    "user-service": {
+      "type": "library",
+      "root": "libs/user-service",
+      "entryFile": "index",
+      "sourceRoot": "libs/user-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/user-service/tsconfig.lib.json"
+      }
+    },
+    "auth-service": {
+      "type": "library",
+      "root": "libs/auth-service",
+      "entryFile": "index",
+      "sourceRoot": "libs/auth-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/auth-service/tsconfig.lib.json"
+      }
+    },
+    "dto": {
+      "type": "library",
+      "root": "libs/dto",
+      "entryFile": "index",
+      "sourceRoot": "libs/dto/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/dto/tsconfig.lib.json"
+      }
+    },
+    "utils": {
+      "type": "library",
+      "root": "libs/utils",
+      "entryFile": "index",
+      "sourceRoot": "libs/utils/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/utils/tsconfig.lib.json"
+      }
+    },
+    "helpers": {
+      "type": "library",
+      "root": "libs/helpers",
+      "entryFile": "index",
+      "sourceRoot": "libs/helpers/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/helpers/tsconfig.lib.json"
+      }
+    }
+  }
 }
