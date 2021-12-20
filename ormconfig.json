@@ -1,0 +1,10 @@
+{
+  "type": "postgres",
+  "host": "localhost",
+  "database": "AuthDB",
+  "username": "postgres",
+  "password": "310718",
+  "logging": true,
+  "synchronize": true,
+  "migrationsTableName": "migrations"
+}

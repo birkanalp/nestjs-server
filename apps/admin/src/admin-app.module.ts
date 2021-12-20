@@ -4,10 +4,10 @@ import { AuthModule } from './controllers/auth.module';
 import { JwtAuthGuard, RolesGuard } from '@app/utils/guards';
 import { JwtStrategy } from '@app/utils/strategies';
 import { SeedService } from '@app/helpers/services';
-import Entities from '@app/models/entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import * as redisStore from 'cache-manager-redis-store';
 import { getConnectionOptions } from 'typeorm';
+import Entities from '@app/models/entity';
 
 @Module({
   imports: [
@@ -40,4 +40,4 @@ import { getConnectionOptions } from 'typeorm';
     },
   ],
 })
-export class AppModule {}
+export class AdminAppModule {}
